@@ -1,0 +1,34 @@
+{
+  "plugins": ["transform-decorators-legacy", "add-module-exports"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": { "node": 7 },
+        "useBuiltIns": true
+      }
+    ],
+    "stage-0",
+    "react"
+  ],
+  "env": {
+    "production": {
+      "presets": ["react-optimize"],
+      "plugins": ["dev-expression"]
+    },
+    "development": {
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "transform-es2015-classes",
+        [
+          "flow-runtime",
+          {
+            "assert": true,
+            "annotate": true
+          }
+        ]
+      ]
+    }
+  }
+}
