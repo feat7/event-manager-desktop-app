@@ -12,6 +12,11 @@ const Navbar = () => (
         Event Manager
       </Link>
     </div>
+    <div className="navbar-brand">
+      <Link to="/" className="navbar-item">
+        Home
+      </Link>
+    </div>
   </nav>
 );
 
