@@ -17,22 +17,8 @@ export default class HomePage extends Component {
             <div className="container">
               <div className="columns">
                 <div className="column">
-                  <Link to="/register-for-event">
-                    <div className="box has-text-primary title">
-                      I want to register for the event
-                    </div>
-                  </Link>
-                </div>
-                <div className="column">
                   <Link to="/user-register">
-                    <div className="box has-text-primary title">
-                      User Register
-                    </div>
-                  </Link>
-                </div>
-                <div className="column">
-                  <Link to="/user-login">
-                    <div className="box has-text-primary title">User Login</div>
+                    <div className="box has-text-primary title">Register</div>
                   </Link>
                 </div>
                 <div className="column">
@@ -45,13 +31,6 @@ export default class HomePage extends Component {
                 <div className="column">
                   <Link to="/user">
                     <div className="box has-text-primary title">User Panel</div>
-                  </Link>
-                </div>
-                <div className="column">
-                  <Link to="/create-event">
-                    <div className="box has-text-primary title">
-                      Create Event
-                    </div>
                   </Link>
                 </div>
               </div>

@@ -30,7 +30,11 @@ export default class HomeScreen extends Component {
       return (
         <div>
           <Navbar />
-          <div>Loading...</div>
+          <section className="hero is-dark is-fullheight">
+            <div className="hero-body">
+              <div className="container">Loading...</div>
+            </div>
+          </section>
         </div>
       );
     return (

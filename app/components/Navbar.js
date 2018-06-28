@@ -11,8 +11,6 @@ const Navbar = () => (
       <Link to="/" className="navbar-item">
         Event Manager
       </Link>
-    </div>
-    <div className="navbar-brand">
       <Link to="/" className="navbar-item">
         Home
       </Link>

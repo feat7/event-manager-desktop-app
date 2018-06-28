@@ -16,7 +16,9 @@ export default class UserRegister extends Component {
     mobile: "",
     email: "",
     password: "",
-    file: "None"
+    file: "None",
+    hasErrors: false,
+    errorMessage: "All fields are required"
   };
   onFileChange(e) {
     const files = e.target.files || e.dataTransfer.files;
@@ -44,6 +46,13 @@ export default class UserRegister extends Component {
                       <a onClick={() => this.props.history.goBack()}>X</a>
                     </div>
                     <div className="title">Register</div>
+                    {this.state.hasErrors ? (
+                      <div className="has-text-danger">
+                        {this.state.errorMessage}
+                      </div>
+                    ) : (
+                      ""
+                    )}
                     <form>
                       <div className="field">
                         <label htmlFor="name" className="label">
@@ -147,11 +156,24 @@ export default class UserRegister extends Component {
                         <button
                           onClick={event => {
                             event.preventDefault();
+                            this.setState({ hasErrors: false });
+                            if (
+                              this.state.email === "" ||
+                              this.state.mobile === "" ||
+                              this.state.name === "" ||
+                              this.state.password === "" ||
+                              this.state.file === "None"
+                            ) {
+                              this.setState({ hasErrors: true });
+                              return 0;
+                            }
+
                             const formData = new FormData();
 
                             formData.append("name", this.state.name);
                             formData.append("mobile", this.state.mobile);
                             formData.append("email", this.state.email);
+                            formData.append("password", this.state.password);
 
                             formData.append("id_card", this.state.file);
 
@@ -167,6 +189,10 @@ export default class UserRegister extends Component {
                                     response.data.user;
                                   return this.props.history.push("/panel");
                                 }
+                                this.setState({
+                                  hasErrors: true,
+                                  errorMessage: response.data.message
+                                });
                                 throw new Error(
                                   `Not registered. info: ${JSON.stringify(
                                     response.data

@@ -8,6 +8,12 @@ import Navbar from "../../components/Navbar";
 @inject("store")
 @observer
 export default class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    if (this.props.store.ui.userDetails === null) {
+      this.props.history.push("/user-login");
+    }
+  }
   render() {
     return (
       <div>
