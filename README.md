@@ -1,6 +1,7 @@
 # Event Manager Cross Platform Desktop Application
 
 Built with electron, react, mobx
+[Desktop App Repo Link](https://github.com/feat7/event-manager-desktop-app)
 
 # Server Repo
 
@@ -46,3 +47,11 @@ Register screen uploads id card which takes time.
 Login to phpmyadmin with following details.
 `const DB_NAME = 'sql12244965'; const DB_USER = 'sql12244965'; const DB_PASS = 'P2DgnuI8Kd'; const DB_HOST = 'sql12.freemysqlhosting.net';`
 can be edited in `env.config.php` to use locally.
+
+# Screenshots
+
+See `screenshots` folder for screenshots
+
+# License
+
+The MIT License
