@@ -18,6 +18,11 @@ Built with electron, react, mobx
 
 3.  Change `API_SERVER` in `app/config.js` if you want to use your own server. Installation procedure for server are available at [Server Repo](https://github.com/feat7/event-manager-server)
 
+5. For development
+
+* Run `yarn run dev` it will open the development version of desktop app.
+* Hot Reloading in dev mode.
+
 4.  To build app
 
 * For all platfroms (Linux, Windows, MacOS) run `yarn run package-all`
